@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV Selector Reference</title>
+  <link rel="stylesheet" href="cv.css">
+  <style>
+    /* Override all spacing to zero and all text to darkest grey */
+    :root {
+      --spacing-space-S: 0px;
+      --spacing-space-M: 0px;
+      --spacing-space-L: 0px;
+      --spacing-space-XL: 0px;
+      --spacing-space-2L-DEFAULT: 0px;
+      --spacing-space-3XL: 0px;
+    }
+    * { color: var(--uxC__greys-900) !important; }
+
+    /* Page layout */
+    body { padding: 40px; }
+
+    /* Selector label */
+    .label {
+      font-family: monospace;
+      font-size: 11px;
+      color: var(--uxC__greys-500) !important;
+      background: var(--uxC__greys-100);
+      padding: 3px 8px;
+      border-radius: 3px;
+      display: inline-block;
+      margin-bottom: 8px;
+      margin-top: 32px;
+    }
+
+    .demo { border-left: 3px solid var(--uxC__greys-200); padding-left: 16px; }
+
+    hr.divider { border: none; border-top: 1px solid var(--uxC__greys-200); margin: 0; }
+  </style>
+</head>
+<body>
+
+  <h1 style="font-size:20px;font-family:monospace;font-weight:400;border:none;padding:0;margin-bottom:32px;">CV Selector Reference</h1>
+
+  <span class="label">.cv-header .name</span>
+  <div class="demo"><div class="name">Jim Glodkowski</div></div>
+
+  <span class="label">.cv-header .contact</span>
+  <div class="demo"><div class="contact">07838 150 760<br>jim@demystified.digital<br>jg-ux.com</div></div>
+
+  <span class="label">h1 — section header</span>
+  <div class="demo"><h1>Selected Contract Roles</h1></div>
+
+  <span class="label">h2 — profile lead (no strong)</span>
+  <div class="demo"><h2>I lead the design of complex digital platforms and products.</h2></div>
+
+  <span class="label">h2:has(strong) — role metadata</span>
+  <div class="demo"><h2><strong>Role:</strong> Product Lead – AI-Enabled Scientific Platforms</h2></div>
+
+  <span class="label">h3 — subheading</span>
+  <div class="demo"><h3>Summary of work</h3></div>
+
+  <span class="label">h2:not(:has(strong)) + h3 — profile subtitle</span>
+  <div class="demo">
+    <h2>I lead the design of complex digital platforms.</h2>
+    <h3>I bring 20+ years' experience across product, design, and delivery.</h3>
+  </div>
+
+  <span class="label">p — body text</span>
+  <div class="demo"><p>I operate at the crossover between subject matter experts, software engineers, and users, translating messy real-world user journeys into coherent, scalable products.</p></div>
+
+  <span class="label">ul / li — list</span>
+  <div class="demo">
+    <ul>
+      <li>Product Management</li>
+      <li>UX and UI Design</li>
+      <li>Service Design</li>
+    </ul>
+  </div>
+
+  <span class="label">hr — divider</span>
+  <div class="demo"><hr></div>
+
+</body>
+</html>
