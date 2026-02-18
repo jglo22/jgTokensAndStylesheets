@@ -1,27 +1,31 @@
 {
   "spacing": {
-    "xs": {
-      "$value": "2pt",
+    "space-zero": {
+      "$value": "0px",
       "$type": "dimension"
     },
-    "sm": {
-      "$value": "4pt",
+    "space-S": {
+      "$value": "2px",
       "$type": "dimension"
     },
-    "md": {
-      "$value": "10pt",
+    "space-M": {
+      "$value": "4px",
       "$type": "dimension"
     },
-    "lg": {
-      "$value": "14pt",
+    "space-L": {
+      "$value": "8px",
       "$type": "dimension"
     },
-    "xl": {
-      "$value": "18pt",
+    "space-XL": {
+      "$value": "16px",
       "$type": "dimension"
     },
-    "2xl": {
-      "$value": "30pt",
+    "space-2L": {
+      "$value": "32px",
+      "$type": "dimension"
+    },
+    "space-3XL": {
+      "$value": "64px",
       "$type": "dimension"
     }
   }
