@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design Tokens — Visual Preview</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Droid Sans', Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.5;
+      color: #222;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 28px;
+      font-weight: 900;
+      margin-bottom: 4px;
+    }
+
+    .page-subtitle {
+      color: #666;
+      margin-bottom: 8px;
+    }
+
+    .generated {
+      color: #999;
+      font-size: 12px;
+      margin-bottom: 40px;
+    }
+
+    .section { margin-bottom: 48px; }
+
+    .section h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 20px;
+      font-weight: 800;
+      border-bottom: 1px solid #000;
+      padding-bottom: 6px;
+      margin-bottom: 20px;
+    }
+
+    .swatch-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 16px;
+    }
+
+    .swatch {
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .swatch-color { height: 64px; }
+
+    .swatch-info {
+      padding: 10px 12px;
+      font-size: 12px;
+    }
+
+    .swatch-token {
+      font-weight: 700;
+      font-family: monospace;
+      font-size: 11px;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .swatch-value {
+      color: #666;
+      font-family: monospace;
+      font-size: 11px;
+    }
+
+    .type-sample {
+      margin-bottom: 20px;
+      padding: 16px;
+      border: 1px solid #eee;
+      border-radius: 6px;
+    }
+
+    .type-meta {
+      font-size: 11px;
+      font-family: monospace;
+      color: #999;
+      margin-bottom: 6px;
+    }
+
+    .spacing-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 12px;
+    }
+
+    .spacing-block {
+      background: #1155CC;
+      opacity: 0.7;
+      border-radius: 3px;
+      flex-shrink: 0;
+    }
+
+    .spacing-label {
+      font-family: monospace;
+      font-size: 12px;
+      min-width: 120px;
+    }
+
+    .spacing-value {
+      font-family: monospace;
+      font-size: 12px;
+      color: #666;
+    }
+
+    .border-example { padding: 16px; margin-bottom: 12px; }
+    .border-demo { height: 0; margin: 12px 0; }
+
+    .page-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .page-table th, .page-table td {
+      text-align: left;
+      padding: 8px 12px;
+      border-bottom: 1px solid #eee;
+      font-size: 13px;
+    }
+
+    .page-table th {
+      font-weight: 700;
+      font-size: 12px;
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .page-table .token-name {
+      font-family: monospace;
+      font-size: 12px;
+    }
+
+    .page-table .token-val {
+      font-family: monospace;
+      font-size: 12px;
+      color: #666;
+    }
+
+    .weight-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
+    }
+
+    .weight-sample {
+      padding: 16px;
+      border: 1px solid #eee;
+      border-radius: 6px;
+    }
+
+    .weight-sample .meta {
+      font-size: 11px;
+      font-family: monospace;
+      color: #999;
+      margin-bottom: 4px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Design Tokens</h1>
+  <p class="page-subtitle">Jim Glodkowski — Visual identity reference sheet</p>
+  <p class="generated">Generated 2026-02-03 — regenerate from tokens.json when values change</p>
+
+  <!-- ====== COLOURS ====== -->
+  <div class="section">
+    <h2>Colours</h2>
+    <div class="swatch-grid">
+
+      <div class="swatch">
+        <div class="swatch-color" style="background: #000000"></div>
+        <div class="swatch-info">
+          <span class="swatch-token">color.text.primary</span>
+          <span class="swatch-value">#000000</span>
+        </div>
+      </div>
+
+      <div class="swatch">
+        <div class="swatch-color" style="background: #666666"></div>
+        <div class="swatch-info">
+          <span class="swatch-token">color.text.secondary</span>
+          <span class="swatch-value">#666666</span>
+        </div>
+      </div>
+
+      <div class="swatch">
+        <div class="swatch-color" style="background: #1155CC"></div>
+        <div class="swatch-info">
+          <span class="swatch-token">color.text.link</span>
+          <span class="swatch-value">#1155CC</span>
+        </div>
+      </div>
+
+      <div class="swatch">
+        <div class="swatch-color" style="background: #000000"></div>
+        <div class="swatch-info">
+          <span class="swatch-token">color.border.default</span>
+          <span class="swatch-value">#000000</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ====== TYPOGRAPHY: FAMILIES ====== -->
+  <div class="section">
+    <h2>Typography — Families</h2>
+
+    <div class="type-sample">
+      <div class="type-meta">font.family.display — Playfair Display</div>
+      <div style="font-family: 'Playfair Display', Georgia, serif; font-size: 24px;">
+        The quick brown fox jumps over the lazy dog
+      </div>
+    </div>
+
+    <div class="type-sample">
+      <div class="type-meta">font.family.body — Droid Sans</div>
+      <div style="font-family: 'Droid Sans', Arial, sans-serif; font-size: 24px;">
+        The quick brown fox jumps over the lazy dog
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== TYPOGRAPHY: SIZES ====== -->
+  <div class="section">
+    <h2>Typography — Sizes</h2>
+
+    <div class="type-sample">
+      <div class="type-meta">font.size.xs — 8pt</div>
+      <div style="font-family: 'Droid Sans', Arial, sans-serif; font-size: 8pt;">Sample text at 8pt</div>
+    </div>
+
+    <div class="type-sample">
+      <div class="type-meta">font.size.sm — 10pt</div>
+      <div style="font-family: 'Droid Sans', Arial, sans-serif; font-size: 10pt;">Sample text at 10pt</div>
+    </div>
+
+    <div class="type-sample">
+      <div class="type-meta">font.size.md — 11pt</div>
+      <div style="font-family: 'Droid Sans', Arial, sans-serif; font-size: 11pt;">Sample text at 11pt</div>
+    </div>
+
+    <div class="type-sample">
+      <div class="type-meta">font.size.lg — 14pt</div>
+      <div style="font-family: 'Playfair Display', Georgia, serif; font-size: 14pt;">Sample text at 14pt</div>
+    </div>
+
+    <div class="type-sample">
+      <div class="type-meta">font.size.xl — 18pt</div>
+      <div style="font-family: 'Playfair Display', Georgia, serif; font-size: 18pt;">Sample text at 18pt</div>
+    </div>
+
+    <div class="type-sample">
+      <div class="type-meta">font.size.2xl — 20pt</div>
+      <div style="font-family: 'Playfair Display', Georgia, serif; font-size: 20pt;">Sample text at 20pt</div>
+    </div>
+
+    <div class="type-sample">
+      <div class="type-meta">font.size.display — 36pt</div>
+      <div style="font-family: 'Playfair Display', Georgia, serif; font-size: 36pt;">Sample text at 36pt</div>
+    </div>
+  </div>
+
+  <!-- ====== TYPOGRAPHY: WEIGHTS ====== -->
+  <div class="section">
+    <h2>Typography — Weights</h2>
+    <div class="weight-grid">
+
+      <div class="weight-sample">
+        <div class="meta">font.weight.regular — 400</div>
+        <div style="font-family: 'Playfair Display', Georgia, serif; font-size: 20px; font-weight: 400;">Playfair Display</div>
+        <div style="font-family: 'Droid Sans', Arial, sans-serif; font-size: 16px; font-weight: 400; margin-top: 4px;">Droid Sans</div>
+      </div>
+
+      <div class="weight-sample">
+        <div class="meta">font.weight.bold — 700</div>
+        <div style="font-family: 'Playfair Display', Georgia, serif; font-size: 20px; font-weight: 700;">Playfair Display</div>
+        <div style="font-family: 'Droid Sans', Arial, sans-serif; font-size: 16px; font-weight: 700; margin-top: 4px;">Droid Sans</div>
+      </div>
+
+      <div class="weight-sample">
+        <div class="meta">font.weight.extrabold — 800</div>
+        <div style="font-family: 'Playfair Display', Georgia, serif; font-size: 20px; font-weight: 800;">Playfair Display</div>
+        <div style="font-family: 'Droid Sans', Arial, sans-serif; font-size: 16px; font-weight: 800; margin-top: 4px;">Droid Sans</div>
+      </div>
+
+      <div class="weight-sample">
+        <div class="meta">font.weight.black — 900</div>
+        <div style="font-family: 'Playfair Display', Georgia, serif; font-size: 20px; font-weight: 900;">Playfair Display</div>
+        <div style="font-family: 'Droid Sans', Arial, sans-serif; font-size: 16px; font-weight: 900; margin-top: 4px;">Droid Sans</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ====== TYPOGRAPHY: LINE HEIGHTS ====== -->
+  <div class="section">
+    <h2>Typography — Line Heights</h2>
+
+    <div class="type-sample">
+      <div class="type-meta">font.lineHeight.tight — 1.15</div>
+      <div style="font-family: 'Droid Sans', Arial, sans-serif; font-size: 14px; line-height: 1.15; max-width: 500px;">
+        This paragraph demonstrates a line-height of 1.15. It contains enough text to wrap across multiple lines so you can see the vertical rhythm and spacing between lines of text in a real reading context.
+      </div>
+    </div>
+
+    <div class="type-sample">
+      <div class="type-meta">font.lineHeight.normal — 1.3</div>
+      <div style="font-family: 'Droid Sans', Arial, sans-serif; font-size: 14px; line-height: 1.3; max-width: 500px;">
+        This paragraph demonstrates a line-height of 1.3. It contains enough text to wrap across multiple lines so you can see the vertical rhythm and spacing between lines of text in a real reading context.
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== SPACING ====== -->
+  <div class="section">
+    <h2>Spacing</h2>
+
+    <div class="spacing-row">
+      <span class="spacing-label">spacing.xs</span>
+      <div class="spacing-block" style="width: 6px; height: 6px;"></div>
+      <span class="spacing-value">2pt</span>
+    </div>
+
+    <div class="spacing-row">
+      <span class="spacing-label">spacing.sm</span>
+      <div class="spacing-block" style="width: 12px; height: 12px;"></div>
+      <span class="spacing-value">4pt</span>
+    </div>
+
+    <div class="spacing-row">
+      <span class="spacing-label">spacing.md</span>
+      <div class="spacing-block" style="width: 30px; height: 30px;"></div>
+      <span class="spacing-value">10pt</span>
+    </div>
+
+    <div class="spacing-row">
+      <span class="spacing-label">spacing.lg</span>
+      <div class="spacing-block" style="width: 42px; height: 42px;"></div>
+      <span class="spacing-value">14pt</span>
+    </div>
+
+    <div class="spacing-row">
+      <span class="spacing-label">spacing.xl</span>
+      <div class="spacing-block" style="width: 54px; height: 54px;"></div>
+      <span class="spacing-value">18pt</span>
+    </div>
+
+    <div class="spacing-row">
+      <span class="spacing-label">spacing.2xl</span>
+      <div class="spacing-block" style="width: 90px; height: 90px;"></div>
+      <span class="spacing-value">30pt</span>
+    </div>
+  </div>
+
+  <!-- ====== BORDERS ====== -->
+  <div class="section">
+    <h2>Borders</h2>
+    <div class="border-example">
+      <div class="type-meta">border.width.default: 1px | border.style.default: solid | color.border.default: #000000</div>
+      <div class="border-demo" style="border-top: 1px solid #000000;"></div>
+      <div style="font-size: 12px; color: #999;">This is the standard rule/divider used throughout the design system.</div>
+    </div>
+  </div>
+
+  <!-- ====== PAGE ====== -->
+  <div class="section">
+    <h2>Page (Print Context)</h2>
+    <table class="page-table">
+      <thead>
+        <tr><th>Token</th><th>Value</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="token-name">page.size</td>
+          <td class="token-val">A4</td>
+        </tr>
+        <tr>
+          <td class="token-name">page.margin.top</td>
+          <td class="token-val">90pt</td>
+        </tr>
+        <tr>
+          <td class="token-name">page.margin.side</td>
+          <td class="token-val">34pt</td>
+        </tr>
+        <tr>
+          <td class="token-name">page.margin.bottom</td>
+          <td class="token-val">28.3pt</td>
+        </tr>
+        <tr>
+          <td class="token-name">page.maxWidth</td>
+          <td class="token-val">527.2pt</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>
