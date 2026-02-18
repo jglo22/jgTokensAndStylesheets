@@ -20,7 +20,7 @@
       "$value": "16px",
       "$type": "dimension"
     },
-    "space-2L": {
+    "space-2L-DEFAULT": {
       "$value": "32px",
       "$type": "dimension"
     },
