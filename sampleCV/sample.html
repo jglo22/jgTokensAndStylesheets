@@ -2,99 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CV Selector Reference</title>
   <link rel="stylesheet" href="cv.css">
-  <style>
-    * { color: var(--uxC__greys-900) !important; }
-
-    /* Reference page layout */
-    body { padding: 40px; }
-
-    section {
-      margin-bottom: 40px;
-      border-left: 3px solid var(--uxC__greys-200);
-      padding-left: 16px;
-    }
-
-    code {
-      display: block;
-      font-family: monospace;
-      font-size: 11px;
-      background: var(--uxC__greys-100);
-      color: var(--uxC__greys-600) !important;
-      padding: 3px 8px;
-      border-radius: 3px;
-      margin-bottom: 12px;
-    }
-  </style>
 </head>
 <body>
-
-  <section>
-    <code>header > div:first-child — name</code>
-    <header>
-      <div>Jim Glodkowski</div>
-      <div></div>
-    </header>
-  </section>
-
-  <section>
-    <code>header > div:last-child — contact</code>
-    <header>
-      <div></div>
-      <div>
-        <div>07838 150 760</div>
-        <div>jim@demystified.digital</div>
-        <div>jg-ux.com</div>
-      </div>
-    </header>
-  </section>
-
-  <section>
-    <code>h1 — section header</code>
-    <h1>Selected Contract Roles</h1>
-  </section>
-
-  <section>
-    <code>h2 — profile lead (no strong)</code>
-    <h2>I lead the design of complex digital platforms and products.</h2>
-  </section>
-
-  <section>
-    <code>h2:has(strong) — role metadata</code>
-    <h2><strong>Role:</strong> Product Lead – AI-Enabled Scientific Platforms</h2>
-  </section>
-
-  <section>
-    <code>h3 — subheading</code>
-    <h3>Summary of work</h3>
-  </section>
-
-  <section>
-    <code>h2:not(:has(strong)) + h3 — profile subtitle</code>
-    <h2>I lead the design of complex digital platforms.</h2>
-    <h3>I bring 20+ years' experience across product, design, and delivery.</h3>
-  </section>
-
-  <section>
-    <code>p — body text</code>
-    <p>I operate at the crossover between subject matter experts, software engineers, and users, translating messy real-world user journeys into coherent, scalable products.</p>
-  </section>
-
-  <section>
-    <code>ul / li — list</code>
-    <ul>
-      <li>Product Management</li>
-      <li>UX and UI Design</li>
-      <li>Service Design</li>
-    </ul>
-  </section>
-
-  <section>
-    <code>hr — divider</code>
-    <hr>
-  </section>
-
+  <header>
+    <div>Jim Glodkowski</div>
+    <div>07838 150 760</div>
+  </header>
+  <h1>h1 — Section header</h1>
+  <h2>h2 — Profile lead (no strong)</h2>
+  <h2><strong>h2 strong:</strong> Role metadata</h2>
+  <h3>h3 — Subheading</h3>
+  <h2>h2 followed by h3 — profile subtitle</h2>
+  <h3>h3 directly after profile lead h2</h3>
+  <p>p — Body text paragraph</p>
+  <ul>
+    <li>li — List item one</li>
+    <li>li — List item two</li>
+  </ul>
+  <hr>
 </body>
 </html>
