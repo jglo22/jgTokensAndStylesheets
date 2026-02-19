@@ -29,7 +29,7 @@ h2 {
   border-bottom: var(--border-width-default) var(--border-style-default) var(--uxC__greys-300);
 }
 
-.test p, .test ul li {
+.introduction p, .introduction ul li {
   font-family: var(--font-family-display);
   font-size: var(--font-size-2);
   font-weight: var(--font-weight-bold);
@@ -38,9 +38,14 @@ h2 {
   margin-top: var(--spacing-space-XL); 
 }
 
-.test ul li
+.introduction ul li
 {
   margin-top: 0px;
+}
+
+.caseStudyWrapper {
+  background-color: blueviolet;
+  border: 10px dashed green;
 }
 
 h3 {
