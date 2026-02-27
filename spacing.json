@@ -1,30 +1,30 @@
 {
   "spacing": {
-    "space-zero": {
+    "spaceZero": {
       "$value": "0px",
       "$type": "dimension"
     },
-    "space-S": {
+    "spaceS": {
       "$value": "2px",
       "$type": "dimension"
     },
-    "space-M": {
+    "spaceM": {
       "$value": "4px",
       "$type": "dimension"
     },
-    "space-L": {
+    "spaceL": {
       "$value": "8px",
       "$type": "dimension"
     },
-    "space-XL": {
+    "spaceXL": {
       "$value": "16px",
       "$type": "dimension"
     },
-    "space-2XL": {
+    "space2XL": {
       "$value": "32px",
       "$type": "dimension"
     },
-    "space-3XL": {
+    "space3XL": {
       "$value": "64px",
       "$type": "dimension"
     }
